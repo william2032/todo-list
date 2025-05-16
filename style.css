@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background: #4A90E2;
+    /*background: linear-gradient(135deg, hsl(255, 53%, 29%), hsl(242, 50%, 29%));*/
+}
+
+.todo-app-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 680px;
+    margin: 150px auto;
+    justify-content: center;
+    align-items: center;
+    background: #7ED957;
+    border-radius: 10px;
+}
+
+.todo-app-title {
+    background: #F7F9FB;
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 28px;
+}
+
+.todo-app-title h1 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 200;
+    font-size: 35px;
+    width: 100%;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 10px;
+
+}
+
+.input {
+    flex: 1;
+    padding: 10px calc(100% - 20px) 10px 10px;
+
+    height: 40px;
+    border-radius: 10px;
+    align-content: center;
+    background: #f3f3f3;
+    border: 2px solid hsl(198, 67%, 50%);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.input-btn {
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: #f3f3f3;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+ul li {
+    list-style: none;
+    text-align: center;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li > button {
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    margin: 10px;
+
+    text-align: center;
+}
+
+ul li::before {
+    content: '';
+    list-style: none;
+    text-align: center;
+    position: absolute;
+    padding: 10px;
+    height: 5px;
+    width: 5px;
+    border-radius: 10px;
+    background-image: url("unchecked.svg");
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 10px;
+}
+
+.checked {
+    color: hsl(198, 67%, 50%);
+    text-decoration: line-through;
+}
+
+.checked::before {
+    background-image: url("checked.svg");
+}
