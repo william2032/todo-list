@@ -61,6 +61,12 @@ todoList.addEventListener('input', (e) => {
         updateTask(taskId, target);
     }
 })
+todoList.addEventListener('keydown' ,(e) =>{
+    if (e.keyCode === 13) {
+        e.preventDefault();
+        e.target.blur();
+    }
+})
 
 
 function createTask(task) {
